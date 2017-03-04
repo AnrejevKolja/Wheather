@@ -1,7 +1,7 @@
 <?php
-$url = 'http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1';
+$url = 'http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=aa2fa8d00be5cf0b79285f318608f64c';
  $json = file_get_contents($url);
-// echo $json;
+ echo $json;
  $weatherObj = json_decode($json);
 
  echo "City: Tallinn<br>";

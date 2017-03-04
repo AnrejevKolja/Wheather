@@ -38,9 +38,9 @@ and open the template in the editor.
         </div>
 
         <div clss="row">
-            <div class="col-md-4 col-md-offset-1" id="main">
-                
-            </div>
+            <div class="col-md-4 col-md-offset-1" id="main"></div>
+            <div class="col-md-4 col-md-offset-1" id="additional_info"></div>
+            
         </div>
 
         <script>
@@ -48,6 +48,12 @@ and open the template in the editor.
                 var city = $('#city').val();
                 var url = 'getMainWeather.php?city='+city;
                $('#main').load(url); 
+               
+                var url = 'getAdditionalWeather.php?city='+city;
+               $('#additional_info').load(url); 
+               
+              
+               
             });
         </script>
     </body>

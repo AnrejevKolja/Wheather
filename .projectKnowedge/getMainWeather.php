@@ -16,8 +16,16 @@ $url = 'http://samples.openweathermap.org/data/2.5/weather?q='.$_GET['city'].'&a
         <th>Давление:</th>
         <td><?= $weatherObj->main->pressure; ?></td>
     </tr>
-        <tr>
+    <tr>
         <th>Влажность:</th>
         <td><?= $weatherObj->main->humidity; ?></td>
+    </tr>
+    <tr>
+        <th>Минимальная температура:</th>
+        <td><?= $weatherObj->main->temp_min; ?></td>
+    </tr>
+    <tr>
+        <th>Максимальная температура:</th>
+        <td><?= $weatherObj->main->temp_max; ?></td>
     </tr>
 </table>
