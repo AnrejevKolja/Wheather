@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Clouds with JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <input name="clouds" id ="clouds" type="text">
+            <input type="button" id="showImg" value="Show">
+        </div>
+        <div>
+            <img src="images/solnishko.png" id="clouds_img">
+            <span id="errorMsg"></span>
+        </div>
+        <script> 
+            $('#showImg').click(function() {
+                var clouds = $('#clouds').val();
+                var img = "";
+                var errorMsg = "";
+                $('#errorMsg').html(errorMsg);
+                if (clouds > 0 && clouds <= 20) { img = "images/solnishko.png"}
+                else if (clouds >20 && clouds <= 40) { img = "images/solnishko_i_oblachko.png"
+                }
+                else if (clouds >40 && clouds <= 60) { img = "images/solnishko_i_3oblachka.png"
+                }
+                else if (clouds >60 && clouds <= 80) { img = "images/solnishko_i_6oblachka.png"}
+                else if (clouds >80 && clouds <= 100) { img = "images/solnishko_i_1big_oblachka.png"}
+                else {
+                    errorMsg = "Такой картинки нет";
+                    $('#errorMsg').html(errorMsg);
+                }
+                $('#clouds_img').attr("src", img);
+            });
+            
+            </script>
+    </body>
+</html>
